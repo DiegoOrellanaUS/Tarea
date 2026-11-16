@@ -1,0 +1,35 @@
+@Sistema_HostAddress = http://localhost:8080
+@PersonaId = 1
+
+POST {{Sistema_HostAddress}}/api/personas
+Content-Type: application/json
+
+{
+  "nombre": "Ana Pérez",
+  "ci": "1234567"
+}
+
+###
+
+GET {{Sistema_HostAddress}}/api/personas
+Accept: application/json
+
+###
+
+GET {{Sistema_HostAddress}}/api/personas/{{PersonaId}}
+Accept: application/json
+
+###
+
+PUT {{Sistema_HostAddress}}/api/personas/{{PersonaId}}
+Content-Type: application/json
+
+{
+  "nombre": "Ana Pérez López",
+  "ci": "1234567",
+  "estado": "Activo"
+}
+
+###
+
+DELETE {{Sistema_HostAddress}}/api/personas/{{PersonaId}}
