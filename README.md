@@ -15,6 +15,8 @@ Invoke-RestMethod http://localhost:8080/api/personas
 
 Puedes cambiar `API_PORT` en `.env` si el puerto 8080 está ocupado. La API aplica la migración al arrancar y PostgreSQL conserva los datos en el volumen `sistema_postgres_data`.
 
+Abre [Scalar](http://localhost:8080/scalar/v1) en el navegador para consultar y probar los endpoints. Si cambias `API_PORT`, usa el mismo puerto en esa dirección.
+
 Los ejemplos de [Sistema.http](Sistema/Sistema.http) cubren las cinco operaciones. Ejecuta primero el POST y usa el ID devuelto en las solicitudes siguientes.
 
 ## Arrancar desde la imagen local

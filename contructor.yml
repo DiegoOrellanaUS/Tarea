@@ -8,6 +8,7 @@ services:
       dockerfile: Dockerfile
     container_name: sistema-api
     environment:
+      ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: "8080"
       POSTGRES_HOST: postgres
       POSTGRES_DB: ${POSTGRES_DB:?Define POSTGRES_DB en .env}
